@@ -12,7 +12,7 @@ function App() {
     <div>
       <NavBar />
       <Home name={user.name} city={user.city} color={user.color}/>
-      <About bio="I made this!"/>
+      <About bioPresent={true}  bio="I made this!"/>
     </div>
   );
 }

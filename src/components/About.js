@@ -1,17 +1,16 @@
 import React from "react";
-
-function Links(props){
-  return(
-    <a href={props.link}>{props.text}</a>
-  )
-}
+import Links from "./Links";
 
 
 
-function Bio(props){
-  return (
-    <p>{props.Bio}</p>
-  )
+function Bio(props) {
+  const bioPresent = props.Bio
+  if (bioPresent) {
+    return <p>{props.Bio}</p>
+  }
+  else{
+    return null
+  }
 }
 
 function About(props) {
@@ -20,8 +19,7 @@ function About(props) {
       <h2>About Me</h2>
       <Bio Bio={props.bio}/>
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links link="https://github.com/liza" text="https://github.com/liza"/>
-      <Links link="https://www.linkedin.com/in/liza/" text="https://www.linkedin.com/in/liza/"/>
+      <Links/>
     </div>
   );
 }
